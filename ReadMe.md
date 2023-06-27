@@ -4,11 +4,11 @@
 
 ### All Exercises
 ___
-1: Character Input 
-2: Odd Or Even 
-3: List Less Than Ten  
-4: Divisors  
-5: List Overlap  
+- 1 - Character Input 
+- 2 - Odd Or Even 
+- 3 - List Less Than Ten  
+- 4 - Divisors  
+- 5 - List Overlap  
 6: String Lists  
 7: List Comprehensions  
 8: Rock Paper Scissors   
