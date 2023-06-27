@@ -6,7 +6,6 @@
 
 name = input("What is your name? ")
 age = int(input("What is your age? "))
-new_age = 100 - age
-age_100_year = 2023 + new_age
+year = 2023 - age + 100
 
-print(f"In {age_100_year}, {name} will be 100 years old!!")
+print(f"In {year}, {name} will be 100 years old!!")
