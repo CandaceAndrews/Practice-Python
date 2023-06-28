@@ -3,3 +3,10 @@
 # Hint: how does an even / odd number react differently when divided by 2?
 
 #  -------
+
+number = int(input("Please select a number:  "))
+
+if number % 2 == 0:
+    print(f"{number} is an even number.")
+else:
+    print(f"{number} is an odd number.")
