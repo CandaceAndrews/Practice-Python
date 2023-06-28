@@ -14,10 +14,6 @@ b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 
 # -------
 
-same_elements_list = []
+common_numbers = list(set(a) & set(b))
 
-for number in a:
-    if number in b and number not in same_elements_list:
-        same_elements_list.append(number)
-
-print(same_elements_list)
+print(common_numbers)
