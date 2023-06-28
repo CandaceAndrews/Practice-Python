@@ -5,5 +5,17 @@
 
 # -------
 
-number = int(
+chosen_number = int(
     input("Please select a number to see the divisors for that number:  "))
+
+range_to_number = list(range(1, chosen_number + 1))
+
+divisor_list = []
+
+for number in range_to_number:
+    if chosen_number % number == 0:
+        divisor_list.append(number)
+
+
+for spot in divisor_list:
+    print(spot)
