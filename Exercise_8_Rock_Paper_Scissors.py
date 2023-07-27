@@ -11,11 +11,20 @@ import random
 
 #  -------
 
+
 def paper_rock_scissors_game(decision):
     quit_game = "No"
     options = ["paper", "rock", "scissors"]
     player_choice = input("Please Choose: Paper, Rock or Scissors").lower()
     computer_choice = random.choice(options).lower()
     
+    lose = "You Lose!"
+    win = "You win!"
+
     while quit_game != "exit":
-        if player_choice == "paper" and 
+        if player_choice == computer_choice:
+            print("Tie!")
+        elif player_choice == "paper" and computer_choice == "rock":
+            print(win)
+        elif player_choice == "rock" and computer_choice = "paper":
+            print(lose)
