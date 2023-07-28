@@ -13,7 +13,7 @@ import random
 
 
 def paper_rock_scissors_game():
-    quit_game = "No"
+    game_in_progress = True
     options = ["paper", "rock", "scissors"]
     player_choice = input("Please Choose: Paper, Rock or Scissors:  ").lower()
     computer_choice = random.choice(options).lower()
@@ -21,37 +21,48 @@ def paper_rock_scissors_game():
     lose = "You Lose!"
     win = "You win!"
 
-    while quit_game != "yes":
+    while game_in_progress:
         if player_choice == computer_choice:
-            print(computer_choice)
+            print(f"Player: {player_choice}")
+            print(f"Computer: {computer_choice}")
             print("Tie!")
-            quit_game = input("Keep playing? Yes or No:  ").lower
+            break
         elif player_choice == "paper" and computer_choice == "rock":
-            print(computer_choice)
+            print(f"Player: {player_choice}")
+            print(f"Computer: {computer_choice}")
             print(win)
-            quit_game = input("Keep playing? Yes or No:  ").lower
+            break
         elif player_choice == "paper" and computer_choice == "scissors":
-            print(computer_choice)
+            print(f"Player: {player_choice}")
+            print(f"Computer: {computer_choice}")
             print(lose)
-            quit_game = input("Keep playing? Yes or No:  ").lower
+            break
         elif player_choice == "rock" and computer_choice == "paper":
-            print(computer_choice)
+            print(f"Player: {player_choice}")
+            print(f"Computer: {computer_choice}")
             print(lose)
-            quit_game = input("Keep playing? Yes or No:  ").lower
+            break
         elif player_choice == "rock" and computer_choice == "scissors":
-            print(computer_choice)
+            print(f"Player: {player_choice}")
+            print(f"Computer: {computer_choice}")
             print(win)
-            quit_game = input("Keep playing? Yes or No:  ").lower
+            break
         elif player_choice == "scissors" and computer_choice == "paper":
-            print(computer_choice)
+            print(f"Player: {player_choice}")
+            print(f"Computer: {computer_choice}")
             print(win)
-            quit_game = input("Keep playing? Yes or No:  ").lower
+            break
         elif player_choice == "scissors" and computer_choice == "rock":
-            print(computer_choice)
+            print(f"Player: {player_choice}")
+            print(f"Computer: {computer_choice}")
             print(lose)
-            quit_game = input("Keep playing? Yes or No:  ").lower
+            break
         else:
             print("Please input valid response!")
+
+    play_again = input("Play again? Yes or No:  ").lower()
+    if play_again == "yes":
+        paper_rock_scissors_game()
 
 
 paper_rock_scissors_game()
