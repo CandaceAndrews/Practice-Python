@@ -19,7 +19,9 @@ def number_guessing_game():
     while player_number != computer_number:
         player_number = int(input("Please select a number from 1 to 9:  "))
 
-        if player_number < computer_number:
+        if player_number not in range(1, 10):
+            print("Out of range!")
+        elif player_number < computer_number:
             print(f"{player_number} is too low!")
         elif player_number > computer_number:
             print(f"{player_number} is too high")
