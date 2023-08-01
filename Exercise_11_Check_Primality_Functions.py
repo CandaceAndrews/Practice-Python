@@ -2,3 +2,9 @@
 # (For those who have forgotten, a prime number is a number that has no divisors.).
 
 # -------
+
+number = int(input("Please select a number:  "))
+
+answer = [x for x in range(2, number) if number % x == 0]
+
+print(answer)
