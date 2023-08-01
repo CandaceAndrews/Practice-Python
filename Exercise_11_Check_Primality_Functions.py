@@ -5,6 +5,17 @@
 
 number = int(input("Please select a number:  "))
 
-answer = [x for x in range(2, number) if number % x == 0]
+divisors_of_number = [x for x in range(2, number) if number % x == 0]
 
-print(answer)
+
+def prime_or_not(num):
+    if number > 1:
+        if len(divisors_of_number) == 0:
+            print("Prime")
+        else:
+            print("Not Prime")
+    else:
+        print("Not Prime")
+
+
+prime_or_not(number)
