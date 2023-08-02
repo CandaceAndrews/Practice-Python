@@ -14,3 +14,23 @@ def generate_fibonacci_sequence(n):
         sequence.append(a)
         a, b = b, a + b
     return sequence
+
+
+def main():
+    try:
+        num_numbers = int(
+            input("Enter the number of Fibonacci numbers to generate:  "))
+        if num_numbers <= 0:
+            print("Please enter a positive integer.")
+            return
+
+        fibonacci_sequence = generate_fibonacci_sequence(num_numbers)
+
+        print(f"The Fibonacci sequence with {num_numbers} numbers is:  ")
+        print(fibonacci_sequence)
+    except ValueError:
+        print("Invalid input. Please enter a valid integer.")
+
+
+if __name__ == "__main__":
+    main()
