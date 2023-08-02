@@ -6,6 +6,11 @@
 
 # -------
 
-def fibonnaci(num):
-    user_number = int(
-        input("Please enter the number of numbers in the sequence to generate:  "))
+def generate_fibonacci_sequence(n):
+    sequence = []
+    a, b = 1, 1
+
+    for _ in range(n):
+        sequence.append(a)
+        a, b = b, a + b
+    return sequence
