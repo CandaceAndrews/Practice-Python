@@ -8,11 +8,27 @@
 
 # -------
 
-def no_duplicates(given_list):
-    new_list = set()
-    for _ in given_list:
-        new_list.append(_)
-    return list(new_list)
-
-
 test_list = [1, 2, 2, 3, 4, 5, 5, 5, 6, 7, 7, 7, 8, 9]
+
+# function using sets
+
+
+def no_duplicates_set(given_list):
+    new_set = set(given_list)
+    new_list = list(new_set)
+    print(new_list)
+
+
+no_duplicates_set(test_list)
+
+
+# function using loop
+def no_duplicates_loop(given_list):
+    new_list = []
+    for _ in given_list:
+        if _ not in new_list:
+            new_list.append(_)
+    print(new_list)
+
+
+no_duplicates_loop(test_list)
