@@ -8,22 +8,25 @@ import string
 
 
 def password_generator():
-    short_password = []
-    medium_password = []
-    strong_password = []
 
-    symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "?"]
+    symbols = "!@#$%^&*?"
     lowercase = string.ascii_lowercase
     uppercase = string.ascii_uppercase
     numbers = string.digits
 
-    print(symbols)
-    print(lowercase)
-    print(uppercase)
-    print(numbers)
+    full_password_bank = symbols + lowercase + uppercase + numbers
 
-    # user_request = input(
-    #     "Please choose password type:  Short, Medium or Strong:   ")
+    user_request = input(
+        "Please choose password type:  Short, Medium or Strong:   ").lower
+
+    if user_request == "short":
+        short_password = [random.choice(full_password_bank) for _ in range(5)]
+        print(short_password)
+    elif user_request == "medium":
+        medium_password = [random.choice(full_password_bank) for _ in range(7)]
+        print(medium_password)
+    elif user_request == "strong":
+        return [random.choice(full_password_bank) for _ in range(9)]
 
 
 password_generator()
