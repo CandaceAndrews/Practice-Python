@@ -20,14 +20,19 @@ def password_generator():
         "Please choose password type:  Short, Medium or Strong:   ").lower()
 
     if user_request == "short":
-        short_password = [random.choice(full_password_bank) for _ in range(5)]
+        short_password = ''.join(
+            [random.choice(full_password_bank) for _ in range(5)])
         print(short_password)
     elif user_request == "medium":
-        medium_password = [random.choice(full_password_bank) for _ in range(7)]
+        medium_password = ''.join(
+            [random.choice(full_password_bank) for _ in range(7)])
         print(medium_password)
     elif user_request == "strong":
-        strong_password = [random.choice(full_password_bank) for _ in range(9)]
+        strong_password = ''.join(
+            [random.choice(full_password_bank) for _ in range(9)])
         print(strong_password)
+    else:
+        print("Please input valid response.")
 
 
 password_generator()
