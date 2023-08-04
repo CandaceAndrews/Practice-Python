@@ -17,7 +17,7 @@ def password_generator():
     full_password_bank = symbols + lowercase + uppercase + numbers
 
     user_request = input(
-        "Please choose password type:  Short, Medium or Strong:   ").lower
+        "Please choose password type:  Short, Medium or Strong:   ").lower()
 
     if user_request == "short":
         short_password = [random.choice(full_password_bank) for _ in range(5)]
@@ -26,7 +26,8 @@ def password_generator():
         medium_password = [random.choice(full_password_bank) for _ in range(7)]
         print(medium_password)
     elif user_request == "strong":
-        return [random.choice(full_password_bank) for _ in range(9)]
+        strong_password = [random.choice(full_password_bank) for _ in range(9)]
+        print(strong_password)
 
 
 password_generator()
