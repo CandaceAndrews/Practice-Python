@@ -12,3 +12,13 @@ print(new_string[-1])
 
 join_string = "77".join(new_string)
 print(join_string)
+
+
+def reverse_sentence():
+    string = input("Please enter sentence to reverse:   ")
+    new_string = string.split(" ")
+    reverse_string = new_string[]
+    print(reverse_string)
+
+
+reverse_sentence()
