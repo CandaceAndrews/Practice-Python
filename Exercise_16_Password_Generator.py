@@ -12,7 +12,18 @@ def password_generator():
     medium_password = []
     strong_password = []
 
-    alphabet_lower = [a, b, c, d, e, f, ]
+    symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "?"]
+    lowercase = string.ascii_lowercase
+    uppercase = string.ascii_uppercase
+    numbers = string.digits
 
-    user_request = input(
-        "Please choose password type:  Short, Medium or Strong:   ")
+    print(symbols)
+    print(lowercase)
+    print(uppercase)
+    print(numbers)
+
+    # user_request = input(
+    #     "Please choose password type:  Short, Medium or Strong:   ")
+
+
+password_generator()
