@@ -6,3 +6,11 @@
 # Keep track of the number of guesses the user makes throughout teh game and tell the user at the end.
 
 # -------
+import random
+
+
+def generate_random_number():
+    return str(random.randint(1000, 9999))
+
+def count_cows_and_bulls(secret_number, user_guess):
+    
