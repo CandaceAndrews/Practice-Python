@@ -17,9 +17,9 @@ def count_cows_and_bulls(secret_number, user_guess):
     cows = 0
     bulls = 0
 
-    if _ in range(len(secret_number)):
+    for _ in range(len(secret_number)):
         if secret_number[_] == user_guess[_]:
-            cow += 1
+            cows += 1
         elif user_guess[_] in secret_number:
             bulls += 1
     return cows, bulls
@@ -27,7 +27,26 @@ def count_cows_and_bulls(secret_number, user_guess):
 
 def cows_and_bulls():
     secret_number = generate_random_number()
-    attemps = 0
+    attempts = 0
 
     while True:
         user_input = input("Guess a 4 digit number:  ")
+
+        if not user_input.isdigit() or len(user_input) != 4:
+            print("Please enter a valid 4-digit number.")
+            continue
+
+        attempts += 1
+
+        cows, bulls = count_cows_and_bulls(secret_number, user_input)
+
+        print(f"Cows: {cows}, Bull: {bulls}")
+
+        if cows == 4:
+            print(
+                f"Congratulations! You guessed the correct number {secret_number} in {attempts} attempts.")
+            break
+
+
+if __name__ == "__main__":
+    cows_and_bulls()
