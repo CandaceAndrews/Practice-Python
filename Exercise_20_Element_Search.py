@@ -22,5 +22,3 @@ if __name__ == "__main__":
 inside_list(test_list, 9)
 
 # -------
-
-# def binary_search(list, number):
