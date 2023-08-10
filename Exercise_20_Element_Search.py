@@ -8,17 +8,19 @@
 # -------
 
 def inside_list(list, number):
-    if number in list:
-        print("True")
-    else:
-        print("False")
+    for element in list:
+        if element == number:
+            return True
+    return False
 
 
-test_list = [0, 1, 2, 3, 4, 5, 7, 8, 9]
+if __name__ == "__main__":
+    test_list = [0, 1, 2, 3, 4, 5, 7, 8, 9]
+    print(inside_list(test_list, 5))
+
 
 inside_list(test_list, 9)
 
 # -------
 
-def binary_search(list, number):
-    
+# def binary_search(list, number):
