@@ -1,4 +1,4 @@
-# Practice Python Exercises
+# 🐍 Practice Python Exercises
 
 ## Practice problems from https://www.practicepython.org/
 
