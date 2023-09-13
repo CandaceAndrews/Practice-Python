@@ -5,7 +5,12 @@
 
 # -------
 
-birthday_dict = {}
+birthday_dict = {
+    "Claire Redfield": "Oct. 17th, 1987",
+    "Leon Kennedy": "Sept. 24th, 1985",
+    "Sherry Birkin": "Nov. 11th, 1999",
+}
+
 
 def find_birthday():
-    
+    birthday_to_find = input("Who's birthday do you want to look up?")
