@@ -5,12 +5,20 @@
 
 # -------
 
-birthday_dict = {
-    "Claire Redfield": "Oct. 17th, 1987",
-    "Leon Kennedy": "Sept. 24th, 1985",
-    "Sherry Birkin": "Nov. 11th, 1999",
-}
+if __name__ == '__main__':
 
+    birthdays = {
+        'Leon': '03/14/1985',
+        'Claire': '01/17/1987',
+        'Ada': '12/10/1986',
+        'Sherry': '06/14/1999',
+        'Kendo': '01/6/1968'}
 
-def find_birthday():
-    birthday_to_find = input("Who's birthday do you want to look up?")
+    print('Welcome to the birthday dictionary. We know the birthdays of:')
+    for name in birthdays:
+        print(name)
+
+    name = input('Who\'s birthday do you want to look up? ')
+
+    if name in birthdays:
+        print(f"{name}'s birthday is {birthdays[name]}")
